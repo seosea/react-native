@@ -6,7 +6,6 @@
 plugins {
     id("com.android.library")
     id("maven")
-    id("de.undercouch.download")
 }
 
 import de.undercouch.gradle.tasks.download.Download
@@ -388,4 +387,5 @@ dependencies {
     }
 }
 
+apply plugin: 'de.undercouch.download'
 apply(from: "release.gradle")
