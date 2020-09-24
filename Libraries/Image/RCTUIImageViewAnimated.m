@@ -269,8 +269,11 @@ static NSUInteger RCTDeviceFreeMemory() {
   if (_currentFrame) {
     layer.contentsScale = self.animatedImageScale;
     layer.contents = (__bridge id)_currentFrame.CGImage;
+  } else {
+    [super displayLayer:layer];
   }
 }
+
 
 #pragma mark - Util
 
